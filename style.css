@@ -100,17 +100,16 @@ blockquote, q {
 
 /* End fonts */
 
-/*
-5C1F0B red
-362419 brown
-C2AD96 beige
-#848F94
-*/
+html {
+    height: 100%;
+    background: #091F29;
+    background: -moz-linear-gradient(-45deg, #162B34, #091F29);
+}
 body {
     font-family: 'Candela', helvetica, sans-serif;
     font-size: 14px;
     color: #333;
-    background-color: #091F29;
+    background: inherit;
 }
 a, a:hover, a:visited, a:active {
     color: inherit;
@@ -134,9 +133,7 @@ header h1 {
 header h2 {
     color: #666;
     font-size: 30px;
-}
-header h2 span {
-    margin-right: 10px;
+    word-spacing: 7px;
 }
 header img {
     height: 130px;
@@ -170,42 +167,48 @@ header img {
     background-color: #C1C7C9;
     padding: 10px;
 }
-#content .summary div h3 {
+#content div h3 {
     font-family: 'Bebas';
     font-size: 18px;
     margin-bottom: 10px;
+    word-spacing: 3px;
 }
-#content .summary div h3 a {
+#content div h3 a {
     color: #999;
     text-decoration: none;
-    margin: 0 5px;
+    margin: 0 2px;
 }
-#content .summary div h3 a:hover {
+#content .goal {
+    float: right;
+    background: url(images/arrow.svg) no-repeat 0% 50%;
+    padding-left: 20px;
+}
+#content div h3 a:hover {
     color: #666;
 }
-#content .summary .quarter {
+#content .initiatives .quarter {
     margin-bottom: 10px;
     display: none;
 }
-#content .summary p.quarter {
+#content .initiatives p.quarter {
     color: #666;
     font-size: 16px;
     margin-left: 20px;
     padding: 3px 0;
 }
-#content .summary li {
+#content .initiatives li {
     font-size: 16px;
     padding: 3px 0 3px 15px;
     -moz-transition: background-color 0.5s;
 }
-#content .summary li a {
+#content .initiatives li a {
     display: none;
     margin-left: 10px;
     color: #999;
     font-size: 12px;
     padding: 2px;
 }
-#content .summary li div {
+#content .initiatives li div {
     display: none;
     background-color: #E0E3E4;
     position: absolute;
@@ -213,14 +216,14 @@ header img {
     width: 840px;
     padding: 5px;
 }
-#content .summary li:hover a {
+#content .initiatives li:hover a {
     display: inline;
 }
-#content .summary li a:hover {
+#content .initiatives li a:hover {
     cursor: pointer;
     background-color: #E0E3E4;
 }
-#content .summary li a:hover + div {
+#content .initiatives li a:hover + div {
     display: block;
 }
 
@@ -251,7 +254,7 @@ header img {
 }
 
 /* Progress meters */
-#content .summary li > span {
+#content .initiatives li > span {
     display: inline-block;
     border: 1px solid #666;
     margin-right: 5px;
@@ -261,7 +264,7 @@ header img {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
 }
-#content .summary li > span span {
+#content .initiatives li > span span {
     display: block;
     height: 8px;
     border-top-left-radius: 5px;
@@ -272,51 +275,75 @@ header img {
     -moz-border-radius-bottomleft: 5px;
 }
 
-#content .summary li.p0 > span {
+#content .initiatives li.p0 > span {
     border-color: #9A201F;
 }
-#content .summary li.p0 > span.p0 span {
+#content .initiatives li.p0 > span.p0 span {
     width: 0%;
     background-color: #9A201F;
 }
-#content .summary li.p10 > span {
+#content .initiatives li.p10 > span {
     border-color: #9A201F;
 }
-#content .summary li.p10 > span span {
+#content .initiatives li.p10 > span span {
     width: 10%;
     background-color: #9A201F;
 }
-#content .summary li.p25 > span {
+#content .initiatives li.p25 > span {
     border-color: #9A201F;
 }
-#content .summary li.p25 > span span {
+#content .initiatives li.p25 > span span {
     width: 25%;
     background-color: #9A201F;
 }
-#content .summary li.p50 > span {
+#content .initiatives li.p50 > span {
     border-color: #9A8128;
 }
-#content .summary li.p50 > span span {
+#content .initiatives li.p50 > span span {
     width: 50%;
     background-color: #9A8128;
 }
-#content .summary li.p75 > span {
+#content .initiatives li.p75 > span {
     border-color: #1F9A44;
 }
-#content .summary li.p75 > span span {
+#content .initiatives li.p75 > span span {
     width: 75%;
     background-color: #1F9A44;
 }
-#content .summary li.p100 {
+#content .initiatives li.p100 {
     color: #1F9A44;
 }
-#content .summary li.p100 > span {
+#content .initiatives li.p100 > span {
     border-color: #1F9A44;
 }
-#content .summary li.p100 > span span {
+#content .initiatives li.p100 > span span {
     width: 100%;
     background-color: #1F9A44;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+}
+
+/* Performance indicators */
+#content .kpi table {
+    width: 100%;
+    font-size: 16px;
+    margin-top: -15px;
+    padding-left: 15px;
+}
+#content .kpi th {
+    font-family: 'Bebas';
+    font-size: 10px;
+    text-align: right;
+    color: #666;
+}
+#content .kpi td {
+    padding: 3px 0;
+    text-align: right;
+}
+#content .kpi td:first-child {
+    text-align: left;
+}
+#content .kpi tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.2);
 }

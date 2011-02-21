@@ -43,6 +43,38 @@ $goals = array(
             'q4' => array(
                 
             )
+        ),
+        'kpi' => array(
+            array(
+                'name' => 'New extensions submitted per month',
+                'start' => 302,
+                'goal' => 600,
+                'current' => ''
+            ),
+            array(
+                'name' => 'New extension developers per month',
+                'start' => 204,
+                'goal' => 350,
+                'current' => ''
+            ),
+            array(
+                'name' => 'Percentage of new add-ons using the SDK',
+                'start' => 3,
+                'goal' => 60,
+                'current' => ''
+            ),
+            array(
+                'name' => 'New add-ons created using the Add-on Builder per month',
+                'start' => '',
+                'goal' => '',
+                'current' => ''
+            ),
+            array(
+                'name' => 'Average review time for new add-ons',
+                'start' => '',
+                'goal' => '',
+                'current' => ''
+            )
         )
     ),
     'performance' => array(
@@ -78,6 +110,9 @@ $goals = array(
             'q4' => array(
                 
             ),
+        ),
+        'kpi' => array(
+            
         )
     ),
     'penetration' => array(
@@ -130,6 +165,9 @@ $goals = array(
                     'details'       => ''
                 )
             )
+        ),
+        'kpi' => array(
+
         )
     ),
     'vampires' => array(
@@ -159,6 +197,9 @@ $goals = array(
                     'details'       => ''
                 )
             ),
+        ),
+        'kpi' => array(
+            
         )
     )
 );

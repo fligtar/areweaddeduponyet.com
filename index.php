@@ -16,7 +16,7 @@ $selected_quarter = 'q1';
         <img src="images/mosaic.png" alt=""/>
         <hgroup>
             <h1>Add-ons</h1>
-            <h2><span>2011</span>Roadmap</h2>
+            <h2>2011 Roadmap</h2>
         </hgroup>
     </header>
     
@@ -28,6 +28,7 @@ $selected_quarter = 'q1';
         <section>
             <h2><?=$goal['name']?><blockquote>&#147;<?=$goal['quote']?>&#148;</blockquote></h2>
             <div class="summary">
+                <h3 class="goal">Goal</h3>
                 <div class="initiatives selected-<?=$selected_quarter?>">
                     <h3>Initiatives <a href="#" class="q1" onclick="return selectQuarter(this);">Q1</a>
                         <a href="#" class="q2" onclick="return selectQuarter(this);">Q2</a>
@@ -49,9 +50,26 @@ $selected_quarter = 'q1';
                     <?php endif;
                     endforeach; ?>
                 </div>
-                <div>
-                    <h3>Progress</h3>
-                </div>
+                <?php if (!empty($goal['kpi'])): ?>
+                    <div class="kpi">
+                        <h3>Performance Indicators</h3>
+                        <table>
+                            <thead>
+                                <tr><th></th><th>Start</th><th>Current</th><th>Goal</th></tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach ($goal['kpi'] as $kpi): ?>
+                                <tr>
+                                    <td><?=$kpi['name']?></td>
+                                    <td><?=$kpi['start']?></td>
+                                    <td><?=$kpi['current']?></td>
+                                    <td><?=$kpi['goal']?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                <?php endif; ?>
             </div>
         </section>
         <?php endforeach; ?>
@@ -65,16 +83,15 @@ $selected_quarter = 'q1';
 
     <!-- Google Analytics -->
     <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-3232120-2']);
-    _gaq.push(['_trackPageview']);
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-21558001-1']);
+      _gaq.push(['_trackPageview']);
 
-    (function() {
-    var ga = document.createElement('script');
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
-        'http://www') + '.google-analytics.com/ga.js';
-    ga.setAttribute('async', 'true');
-    document.documentElement.firstChild.appendChild(ga);
-    })();
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 </body>
 </html>
