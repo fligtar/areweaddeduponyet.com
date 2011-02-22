@@ -310,9 +310,9 @@ header img {
     width: 75%;
     background-color: #1F9A44;
 }
-#content .initiatives li.p100 {
+/*#content .initiatives li.p100 {
     color: #1F9A44;
-}
+}*/
 #content .initiatives li.p100 > span {
     border-color: #1F9A44;
 }
@@ -346,4 +346,9 @@ header img {
 }
 #content .kpi tr:nth-child(even) td {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Time Vampires */
+#content #vampires {
+    display: none;
 }

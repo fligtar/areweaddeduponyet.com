@@ -1,4 +1,5 @@
 <?php
+require_once 'data/panorama.php';
 require_once 'data/goals.php';
 
 $selected_quarter = 'q1';
@@ -21,12 +22,9 @@ $selected_quarter = 'q1';
     </header>
     
     <section id="content">
-        <?php
-        foreach ($goals as $goal): 
-            if ($goal['special']) continue;
-        ?>
-        <section>
-            <h2><?=$goal['name']?><blockquote>&#147;<?=$goal['quote']?>&#148;</blockquote></h2>
+        <?php foreach ($goals as $goal_key => $goal): ?>
+        <section id="<?=$goal_key?>">
+            <h2><blockquote>&#147;<?=$goal['quote']?>&#148;</blockquote><?=$goal['name']?></h2>
             <div class="summary">
                 <h3 class="goal">Goal</h3>
                 <div class="initiatives selected-<?=$selected_quarter?>">
