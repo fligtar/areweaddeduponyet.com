@@ -23,55 +23,62 @@ $selected_quarter = 'q1';
     
     <section id="content">
         <?php foreach ($goals as $goal_key => $goal): ?>
-        <section id="<?=$goal_key?>">
+        <section id="<?=$goal_key?>" class="selected-goal">
             <h2><blockquote>&#147;<?=$goal['quote']?>&#148;</blockquote><?=$goal['name']?></h2>
-            <div class="summary">
-                <h3 class="goal">Goal</h3>
-                <div class="initiatives selected-<?=$selected_quarter?>">
-                    <h3>Initiatives <a href="#" class="q1" onclick="return selectQuarter(this);">Q1</a>
-                        <a href="#" class="q2" onclick="return selectQuarter(this);">Q2</a>
-                        <a href="#" class="q3" onclick="return selectQuarter(this);">Q3</a>
-                        <a href="#" class="q4" onclick="return selectQuarter(this);">Q4</a></h3>
-                    <?php
-                    foreach ($goal['initiatives'] as $quarter => $initiatives):
-                        if (!empty($initiatives)):
-                    ?>
-                        <ol class="quarter <?=$quarter?>">
-                            <?php foreach ($initiatives as $initiative): ?>
-                                <li class="p<?=$initiative['progress']?>"><span><span></span></span><?=$initiative['name']?><a>more info</a>
-                                    <div>details</div>
-                                </li>
-                            <?php endforeach; ?>
-                        </ol>
-                    <?php else: ?>
-                        <p class="quarter <?=$quarter?>">No initiatives this quarter.</p>
-                    <?php endif;
-                    endforeach; ?>
-                </div>
-                <?php if (!empty($goal['kpi'])): ?>
-                    <div class="kpi">
-                        <h3>Performance Indicators</h3>
-                        <table>
-                            <thead>
-                                <tr><th></th><th>Start</th><th>Current</th><th>Goal</th></tr>
-                            </thead>
-                            <tbody>
-                            <?php foreach ($goal['kpi'] as $kpi): ?>
-                                <tr>
-                                    <td><?=$kpi['name']?></td>
-                                    <td><?=$kpi['start']?></td>
-                                    <td><?=$kpi['current']?></td>
-                                    <td><?=$kpi['goal']?></td>
-                                </tr>
-                            <?php endforeach; ?>
-                            </tbody>
-                        </table>
-                    </div>
-                <?php endif; ?>
-            </div>
-        </section>
+            <nav>
+                <a href="#" class="goal" onclick="return selectView(this);">Goal</a>
+                <a href="#" class="initiatives" onclick="return selectView(this);">Initiatives</a>
+                <a href="#" class="kpi" onclick="return selectView(this);">KPI</a>
+            </nav>
+            
+            <section class="goal">
+                <h3>Our Goal</h3>
+                <?=$goal['details']?>
+            </section><!-- /.details -->
+            
+            <section class="initiatives selected-<?=$selected_quarter?>">
+                <h3>Initiatives <a href="#" class="q1" onclick="return selectQuarter(this);">Q1</a>
+                    <a href="#" class="q2" onclick="return selectQuarter(this);">Q2</a>
+                    <a href="#" class="q3" onclick="return selectQuarter(this);">Q3</a>
+                    <a href="#" class="q4" onclick="return selectQuarter(this);">Q4</a></h3>
+                <?php
+                foreach ($goal['initiatives'] as $quarter => $initiatives):
+                    if (!empty($initiatives)):
+                ?>
+                    <ol class="quarter <?=$quarter?>">
+                        <?php foreach ($initiatives as $initiative): ?>
+                            <li class="p<?=$initiative['progress']?>"><span><span></span></span><?=$initiative['name']?><a>more info</a>
+                                <div>details</div>
+                            </li>
+                        <?php endforeach; ?>
+                    </ol>
+                <?php else: ?>
+                    <p class="quarter <?=$quarter?>">No initiatives this quarter.</p>
+                <?php endif;
+                endforeach; ?>
+            </section><!-- /.initiatives -->
+            
+            <section class="kpi">
+                <h3>Performance Indicators</h3>
+                <table>
+                    <thead>
+                        <tr><th></th><th>Start</th><th>Current</th><th>Goal</th></tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($goal['kpi'] as $kpi): ?>
+                        <tr>
+                            <td><?=$kpi['name']?></td>
+                            <td><?=$kpi['start']?></td>
+                            <td><?=$kpi['current']?></td>
+                            <td><?=$kpi['goal']?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </section><!-- /.kpi -->
+        </section><!-- /theme -->
         <?php endforeach; ?>
-    </section>
+    </section><!-- /#content -->
     
     <!--<footer>
         <p>But to answer your original question, yes, we are added upon.</p>

@@ -3,6 +3,23 @@ $goals = array(
     'platform' => array(
         'name' => 'Platform',
         'quote' => 'Firefox is the most attractive platform for browser add-on development.',
+        'details' => <<<DETAILS
+<p>In the last year, the browser add-ons landscape has been turned on its head with 3 new entrants: Chrome, Safari, and Opera. All have restartless, easy-to-develop platforms and developers are flocking to them. We need to re-establish our dominance in add-ons and, hopefully, web/app platforms in general.</p>
+
+<h4>Where are we right now?</h4>
+<p>Our XUL platform is extremely powerful but seen as outdated and hard to learn. The Add-on SDK is making good progress and promises restartless, process-separated add-ons that are very easy to learn and write.</p>
+
+<h4>Where do we want to be?</h4>
+<ul>
+    <li>Developers have all the tools, documentation, and support they need to build great add-ons</li>
+    <li>It's easy to get off the ground quickly with the SDK</li>
+    <li>There's a clear path to monetization (or voluntary contributions) for interested developers</li>
+    <li>Firefox and our platform update quickly to fix bugs and provide new features without introducing compatibility hassles</li>
+    <li>Add-ons want to be hosted in our gallery because of its unmatched add-on distribution and discoverability channels</li>
+    <li>Add-on review process is seen as a helpful validation rather than an annoying burden</li>
+</ul>
+DETAILS
+,
         'initiatives' => array(
             'q1' => array(
                 array(
@@ -25,7 +42,7 @@ $goals = array(
                 ),
                 array(
                     'name'          => 'Switch Contributions to embedded payments flow',
-                    'progress'      => 100,
+                    'progress'      => 75,
                     'difficulty'    => 'medium',
                     'details'       => ''
                 ),
@@ -110,6 +127,23 @@ $goals = array(
     'performance' => array(
         'name' => 'Performance',
         'quote' => 'Add-ons don\'t degrade Firefox performance.',
+        'details' => <<<DETAILS
+<p>Add-ons are one of biggest reasons people use Firefox, but their performance impact is also one of the reasons people leave, whether they realize it or not. The worst offenders are add-ons not hosted on AMO and installed via third parties, but even hosted add-ons share some of the blame. It's time to get serious about add-on performance impacts.</p>
+
+<h4>Where are we right now?</h4>
+<p>The Automation team can manually run startup (Ts) tests for the most popular add-ons, and AMO is ready to show performance warnings on those add-ons alerting users to the slowness.</p>
+
+<h4>Where do we want to be?</h4>
+<ul>
+    <li>Establish a measurable metric for overall add-on performance that we drive downward over the year</li>
+    <li>Performance documentation and best practices are provided for developers to follow</li>
+    <li>Policies are set in place and extreme violators are removed from AMO and/or blocklisted</li>
+    <li>Developers can test their add-on's performance impact with tools BEFORE exposing to end users</li>
+    <li>Users are aware of the performance impacts of their add-ons and must consciously choose to install a performance degrading add-on</li>
+    <li>Adoption of the SDK platform grows and brings performance improvements with it</li>
+</ul>
+DETAILS
+,
         'initiatives' => array(
             'q1' => array(
                 array(
@@ -176,6 +210,19 @@ $goals = array(
     'penetration' => array(
         'name' => 'Penetration',
         'quote' => '60% of Firefox users use extensions.',
+        'details' => <<<DETAILS
+<p>Users who install add-ons are more likely to stick with Firefox and become loyal fans and evangelists. Rather than trying to increase the number of add-ons users have installed, we should focus on increasing the number of users with add-ons.</p>
+
+<h4>Where are we right now?</h4>
+<p>At last measure in October 2010, 40% of all Firefox users had at least one extension or theme installed. Firefox 4 provides a way for us to consistently and reliably measure this percentage, and after release we can use that as the baseline.</p>
+
+<h4>Where do we want to be?</h4>
+<ul>
+    <li>60% of Firefox users have at least one extension (not Persona, theme, etc.) installed</li>
+    <li>We don't count third-party-installed add-ons such as Java Console</li>
+</ul>
+DETAILS
+,
         'initiatives' => array(
             'q1' => array(
                 array(

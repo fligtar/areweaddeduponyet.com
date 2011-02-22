@@ -107,7 +107,7 @@ html {
 }
 body {
     font-family: 'Candela', helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     color: #333;
     background: inherit;
 }
@@ -143,17 +143,18 @@ header img {
 #content {
     width: 900px;
     margin: 0 auto;
+    padding-bottom: 20px;
 }
-#content section {
-    margin: 20px 0;
+#content > section {
+    margin: 20px 0 30px;
 }
-#content section h2 {
+#content h2 {
     font-family: 'Bebas';
     font-size: 45px;
     color: #CF4924;
     text-shadow: 2px 2px 2px #9A201F;
 }
-#content section h2 blockquote {
+#content h2 blockquote {
     font-family: georgia, serif;
     font-style: italic;
     color: #C1C7C9;
@@ -163,31 +164,73 @@ header img {
     text-shadow: none;
     margin-top: 20px;
 }
-#content section > div {
+#content > section > section {
     background-color: #C1C7C9;
-    padding: 10px;
+    padding: 20px;
+    display: none;
 }
-#content div h3 {
+#content section.selected-goal > .goal,
+#content section.selected-initiatives > .initiatives,
+#content section.selected-kpi > .kpi {
+    display: block;
+}
+#content nav {
+    float: right;
+    word-spacing: 2px;
+    margin-right: 10px;
+}
+#content nav a {
+    display: inline-block;
+    font-family: 'Bebas';
+    padding: 5px;
+    color: #999;
+    border-top: 5px solid #C1C7C9;
+    font-size: 14px;
+}
+#content nav a:hover {
+    color: #666;
+}
+#content .selected-goal nav a.goal,
+#content .selected-initiatives nav a.initiatives,
+#content .selected-kpi nav a.kpi {
+    border-top: 5px solid #CF4924;
+    color: #CF4924;
+}
+#content h3 {
     font-family: 'Bebas';
     font-size: 18px;
     margin-bottom: 10px;
     word-spacing: 3px;
 }
-#content div h3 a {
+#content h3 a {
     color: #999;
     text-decoration: none;
     margin: 0 2px;
 }
-#content .goal {
-    float: right;
-    background: url(images/arrow.svg) no-repeat 0% 50%;
-    padding-left: 20px;
-}
-#content div h3 a:hover {
+#content h3 a:hover {
     color: #666;
 }
-#content .initiatives .quarter {
+
+/* Goal */
+#content .goal p {
     margin-bottom: 10px;
+    line-height: 1.1;
+}
+#content .goal h4 {
+    font-weight: bold;
+    margin: 15px 0 5px;
+}
+#content .goal ul {
+    margin-left: 10px;
+}
+#content .goal li {
+    margin-left: 10px;
+    list-style: disc;
+    line-height: 1.1;
+}
+
+/* Initiatives */
+#content .initiatives .quarter {
     display: none;
 }
 #content .initiatives p.quarter {
@@ -274,7 +317,6 @@ header img {
     -moz-border-radius-topleft: 5px;
     -moz-border-radius-bottomleft: 5px;
 }
-
 #content .initiatives li.p0 > span {
     border-color: #9A201F;
 }
@@ -310,9 +352,6 @@ header img {
     width: 75%;
     background-color: #1F9A44;
 }
-/*#content .initiatives li.p100 {
-    color: #1F9A44;
-}*/
 #content .initiatives li.p100 > span {
     border-color: #1F9A44;
 }
@@ -324,7 +363,7 @@ header img {
     -webkit-border-radius: 5px;
 }
 
-/* Performance indicators */
+/* KPI */
 #content .kpi table {
     width: 100%;
     font-size: 16px;
