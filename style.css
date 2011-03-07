@@ -242,7 +242,6 @@ header img {
 #content .initiatives li {
     font-size: 16px;
     padding: 3px 0 3px 15px;
-    -moz-transition: background-color 0.5s;
 }
 #content .initiatives li a {
     display: none;
@@ -256,17 +255,14 @@ header img {
     background-color: #E0E3E4;
     position: absolute;
     z-index: 20;
-    width: 840px;
+    width: 803px;
     padding: 5px;
+    margin-left: 32px;
 }
-#content .initiatives li:hover a {
-    display: inline;
-}
-#content .initiatives li a:hover {
-    cursor: pointer;
+#content .initiatives li:hover {
     background-color: #E0E3E4;
 }
-#content .initiatives li a:hover + div {
+#content .initiatives li:hover div {
     display: block;
 }
 

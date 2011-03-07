@@ -23,7 +23,7 @@ $selected_quarter = 'q1';
     
     <section id="content">
         <?php foreach ($goals as $goal_key => $goal): ?>
-        <section id="<?=$goal_key?>" class="selected-goal">
+        <section id="<?=$goal_key?>" class="selected-initiatives">
             <h2><blockquote>&#147;<?=$goal['quote']?>&#148;</blockquote><?=$goal['name']?></h2>
             <nav>
                 <a href="#" class="goal" onclick="return selectView(this);">Goal</a>
@@ -47,8 +47,8 @@ $selected_quarter = 'q1';
                 ?>
                     <ol class="quarter <?=$quarter?>">
                         <?php foreach ($initiatives as $initiative): ?>
-                            <li class="p<?=$initiative['progress']?>"><span><span></span></span><?=$initiative['name']?><a>more info</a>
-                                <div>details</div>
+                            <li class="p<?=$initiative['progress']?>"><span><span></span></span><?=$initiative['name']?>
+                                <?=(!empty($initiative['details']) ? "<div>{$initiative['details']}</div>" : '')?>
                             </li>
                         <?php endforeach; ?>
                     </ol>

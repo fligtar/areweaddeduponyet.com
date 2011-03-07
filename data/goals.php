@@ -16,7 +16,7 @@ $goals = array(
     <li>There's a clear path to monetization (or voluntary contributions) for interested developers</li>
     <li>Firefox and our platform update quickly to fix bugs and provide new features without introducing compatibility hassles</li>
     <li>Add-ons want to be hosted in our gallery because of its unmatched add-on distribution and discoverability channels</li>
-    <li>Add-on review process is seen as a helpful validation rather than an annoying burden</li>
+    <li>The add-on review process is seen as a helpful validation rather than an annoying burden</li>
 </ul>
 DETAILS
 ,
@@ -26,7 +26,7 @@ DETAILS
                     'name'          => 'Rewrite Developer Tools and implement new review process',
                     'progress'      => 100,
                     'difficulty'    => 'medium',
-                    'details'       => ''
+                    'details'       => 'omg hi details'
                 ),
                 array(
                     'name'          => 'Propose improvements to the add-on compatibility process',
@@ -106,9 +106,9 @@ DETAILS
             ),
             array(
                 'name' => 'Percentage of new extensions using the SDK',
-                'start' => '0.05%',
+                'start' => '5%',
                 'goal' => '50%',
-                'current' => round($remote_data['addons_creation']['30days']['sdk_created'] / $remote_data['addons_creation']['30days']['extensions_created'], 2).'%'
+                'current' => (!empty($remote_data['addons_creation']['30days']['extensions_created']) ? round(($remote_data['addons_creation']['30days']['sdk_created'] / $remote_data['addons_creation']['30days']['extensions_created']) * 100, 2) : 0).'%'
             ),
             array(
                 'name' => 'New add-ons created using the Add-on Builder per month',
@@ -121,7 +121,13 @@ DETAILS
                 'start' => '',
                 'goal' => '',
                 'current' => ''
-            )
+            ),
+            array(
+                'name' => 'Percentage of user-installed add-ons active on AMO',
+                'start' => '68%',
+                'goal' => '90%',
+                'current' => (!empty($remote_data['ecosystem_addonusage']['latest']['addons_installed']) ? round(($remote_data['ecosystem_addonusage']['latest']['amo_active_adu'] / $remote_data['ecosystem_addonusage']['latest']['addons_installed']) * 100, 2) : 0).'%'
+            ),
         )
     ),
     'performance' => array(
@@ -227,13 +233,13 @@ DETAILS
             'q1' => array(
                 array(
                     'name'          => 'Finish Discovery Pane for Firefox 4',
-                    'progress'      => 75,
+                    'progress'      => 100,
                     'difficulty'    => 'easy',
                     'details'       => ''
                 ),
                 array(
                     'name'          => 'Launch mobile-friendly versions of core AMO pages',
-                    'progress'      => 75,
+                    'progress'      => 100,
                     'difficulty'    => 'medium',
                     'details'       => ''
                 ),
@@ -283,9 +289,20 @@ DETAILS
             )
         ),
         'kpi' => array(
-
+            array(
+                'name' => 'Firefox Desktop users with an extension installed',
+                'start' => '40%',
+                'goal' => '60%',
+                'current' => ($remote_data['ecosystem_addonusage']['latest']['penetration'] * 100).'%'
+            ),
+            array(
+                'name' => 'Firefox Mobile users with an extension installed',
+                'start' => '0%',
+                'goal' => '40%',
+                'current' => ($remote_data['ecosystem_addonusage']['latest_mobile']['penetration_adu'] * 100).'%'
+            )
         )
-    ),
+    )/*,
     'vampires' => array(
         'name' => 'Time Vampires',
         'quote' => '',
@@ -316,7 +333,7 @@ DETAILS
         'kpi' => array(
             
         )
-    )
+    )*/
 );
 
 ?>
