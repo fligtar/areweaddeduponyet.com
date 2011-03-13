@@ -243,13 +243,6 @@ header img {
     font-size: 16px;
     padding: 3px 0 3px 15px;
 }
-#content .initiatives li a {
-    display: none;
-    margin-left: 10px;
-    color: #999;
-    font-size: 12px;
-    padding: 2px;
-}
 #content .initiatives li div {
     display: none;
     background-color: #E0E3E4;
@@ -258,6 +251,11 @@ header img {
     width: 803px;
     padding: 5px;
     margin-left: 32px;
+    font-size: 14px;
+    color: #666;
+}
+#content .initiatives li div a {
+    text-decoration: underline;
 }
 #content .initiatives li:hover {
     background-color: #E0E3E4;
@@ -346,6 +344,13 @@ header img {
 }
 #content .initiatives li.p75 > span span {
     width: 75%;
+    background-color: #1F9A44;
+}
+#content .initiatives li.p90 > span {
+    border-color: #1F9A44;
+}
+#content .initiatives li.p90 > span span {
+    width: 90%;
     background-color: #1F9A44;
 }
 #content .initiatives li.p100 > span {

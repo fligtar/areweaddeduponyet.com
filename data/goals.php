@@ -26,49 +26,49 @@ DETAILS
                     'name'          => 'Rewrite Developer Tools and implement new review process',
                     'progress'      => 100,
                     'difficulty'    => 'medium',
-                    'details'       => 'omg hi details'
+                    'details'       => 'Simplify and improve the Developer Tools according to the <a href="https://docs.google.com/Doc?docid=0Acwo2Bn17-PrZGZudHRobnJfNzhmNTh6dGtmeg&hl=en">spec</a> and move to the new Django platform. Include support for the <a href="https://docs.google.com/Doc?docid=0Acwo2Bn17-PrZGZudHRobnJfNzdka3Q2bTdkYw&hl=en">new review process</a> where developers are required to select a review process. <a href="http://people.mozilla.com/~chowse/drop/amo/devtools/v3/">Designs</a>',
                 ),
                 array(
                     'name'          => 'Propose improvements to the add-on compatibility process',
                     'progress'      => 0,
                     'difficulty'    => 'hard',
-                    'details'       => ''
+                    'details'       => 'The current compatibility process takes several months prior to a major release and requires manual effort by add-on developers. In order to move to quarterly Firefox releases, a better method of maintaining compatibility is needed.'
                 ),
                 array(
                     'name'          => 'Rewrite Editor Tools to fully support new review process',
                     'progress'      => 75,
                     'difficulty'    => 'medium',
-                    'details'       => ''
+                    'details'       => 'Move Editor Tools to the new Django codebase for better interaction with the rest of the site and more fully support the new review process.'
                 ),
                 array(
                     'name'          => 'Switch Contributions to embedded payments flow',
                     'progress'      => 75,
                     'difficulty'    => 'medium',
-                    'details'       => ''
+                    'details'       => 'PayPal\'s embedded payments allows users to make contributions to developers without leaving the site. This will lay the groundwork for using the same system for marketplace.'
                 ),
                 array(
                     'name'          => 'Finalize marketplace specification, policies, and designs',
                     'progress'      => 10,
                     'difficulty'    => 'medium',
-                    'details'       => ''
+                    'details'       => 'Prepare for marketplace implementation in Q2 by finalizing the spec, starting on policies for developers and site management, and working on the designs.'
                 ),
                 array(
                     'name'          => 'Complete transition into the new review process with no unreviewed add-ons publicly available',
                     'progress'      => 50,
                     'difficulty'    => 'medium',
-                    'details'       => ''
+                    'details'       => 'With over 7,000 add-ons in the sandbox, requiring Editor review to be listed on AMO will cause a surge in the review queues as we switch to the new process. We should be ready to handle this surge and return the queues to normal by the end of the quarter.'
                 ),
                 array(
                     'name'          => 'Launch redesigned Add-ons Blog for better communication with add-on users and developers',
-                    'progress'      => 50,
+                    'progress'      => 90,
                     'difficulty'    => 'easy',
-                    'details'       => ''
+                    'details'       => 'Our blog is a frequent stream of important information on add-ons, AMO, Jetpack, Personas, etc. and needs an improved layout and design.'
                 ),
                 array(
-                    'name'          => 'Finalize plans for remaining Flightdeck/AMO integration',
+                    'name'          => 'Finalize plans for remaining FlightDeck/AMO integration',
                     'progress'      => 50,
                     'difficulty'    => 'medium',
-                    'details'       => ''
+                    'details'       => 'Determine integration and interaction points between AMO and builder.AMO for the rest of the year.'
                 ),
             ),
             'q2' => array(
@@ -156,25 +156,25 @@ DETAILS
                     'name'          => 'Display performance warnings on AMO for add-ons causing significant Firefox start-up delays',
                     'progress'      => 75,
                     'difficulty'    => 'high',
-                    'details'       => ''
+                    'details'       => 'Users should know when they\'re about to install an add-on that will slow their browser down. When our automated testing identifies slow add-ons, we should show warnings on AMO.'
                 ),
                 array(
                     'name'          => 'Establish acceptable performance ranges and blocklist policy',
                     'progress'      => 25,
                     'difficulty'    => 'low',
-                    'details'       => ''
+                    'details'       => 'For several key metrics (start-up time, page load time, etc.) identify ranges that are deemed great, okay, poor, and unacceptable and the action to be taken for add-ons that fall into those ranges. Revamp the add-ons blocklist policy and include performance ranges.'
                 ),
                 array(
                     'name'          => 'Gather data on add-on performance in the wild and reach out/blocklist',
                     'progress'      => 75,
                     'difficulty'    => 'medium',
-                    'details'       => ''
+                    'details'       => 'Using data obtained from real-world usage, identify slow add-ons and work with the developers to correct the problems.'
                 ),
                 array(
                     'name'          => 'Automate performance tests for newly submitted add-ons',
                     'progress'      => 10,
                     'difficulty'    => 'hard',
-                    'details'       => ''
+                    'details'       => 'All newly submitted add-ons and versions should undergo automated performance testing before being reviewed by an Editor.'
                 )
             ),
             'q2' => array(
@@ -182,19 +182,19 @@ DETAILS
                     'name'          => 'Expose performance information in Firefox',
                     'progress'      => 0,
                     'difficulty'    => 'medium',
-                    'details'       => ''
+                    'details'       => 'Include performance data in AMO\'s API and display in the Firefox Add-ons Manager.'
                 ),
                 array(
                     'name'          => 'Provide on-demand performance analysis tool',
                     'progress'      => 0,
                     'difficulty'    => 'high',
-                    'details'       => ''
+                    'details'       => 'Allow developers to upload an add-on and get emailed a performance report before submitting to AMO.'
                 ),
                 array(
                     'name'          => 'Launch performance campaign directed at developers',
                     'progress'      => 0,
                     'difficulty'    => 'medium',
-                    'details'       => ''
+                    'details'       => 'Bring performance to the forefront of developers\' minds when developing their add-ons.'
                 )
             ),
             'q3' => array(
@@ -202,7 +202,7 @@ DETAILS
                     'name'          => 'Expand performance testing to cover other measurements',
                     'progress'      => 0,
                     'difficulty'    => 'medium',
-                    'details'       => ''
+                    'details'       => 'In addition to start-up time (Ts), we should also measure add-on impact on page load time (Tp) and other measures.'
                 )
             ),
             'q4' => array(
@@ -235,37 +235,37 @@ DETAILS
                     'name'          => 'Finish Discovery Pane for Firefox 4',
                     'progress'      => 100,
                     'difficulty'    => 'easy',
-                    'details'       => ''
+                    'details'       => 'The Get Add-ons pane of the Firefox 4 Add-ons Manager will be a huge source of add-on discovery and downloads.'
                 ),
                 array(
                     'name'          => 'Launch mobile-friendly versions of core AMO pages',
                     'progress'      => 100,
                     'difficulty'    => 'medium',
-                    'details'       => ''
+                    'details'       => 'Build mobile-friendly versions of the homepage, add-on details page, category browse, and search results. <a href="https://wiki.mozilla.org/Mobile/webdevplan/mockups#AMO_Hi-Fi_Mockups">Designs</a>'
                 ),
                 array(
                     'name'          => 'Redesign homepage and add-on details page',
-                    'progress'      => 50,
+                    'progress'      => 25,
                     'difficulty'    => 'medium',
-                    'details'       => ''
+                    'details'       => 'Simplify add-on details page so that important information is front and center and advanced details are available but not highlighted. Revamp homepage to feature more add-ons and better promotions. <a href="http://chowse.github.com/amo-redux/homepage.html">New Homepage design</a> | <a href="http://chowse.github.com/amo-redux/detail.html">New details page design</a>'
                 ),
                 array(
                     'name'          => 'Create "getting started" page with video',
                     'progress'      => 0,
                     'difficulty'    => 'medium',
-                    'details'       => ''
+                    'details'       => 'AMO needs a page to explain what add-ons are, why users would want them, and offer one or two awesome add-ons to try out. There should be an easy-to-understand video with animation.'
                 ),
                 array(
                     'name'          => 'Revamp process of featuring add-ons',
-                    'progress'      => 0,
+                    'progress'      => 25,
                     'difficulty'    => 'easy',
-                    'details'       => ''
+                    'details'       => 'The process of featuring add-ons is not transparent and has been neglected for many months. Propose and implement a better system.'
                 ),
                 array(
                     'name'          => 'Begin locale-specific featured lists in 3 tier 1 locales',
                     'progress'      => 0,
                     'difficulty'    => 'easy',
-                    'details'       => ''
+                    'details'       => 'We currently feature the same add-ons in all locales, most of which are not localized in those locales. We should begin maintaining locale-specific featured lists.'
                 )
             ),
             'q2' => array(
@@ -276,7 +276,7 @@ DETAILS
                     'name'          => 'Improve experience for non-English locales in AMO',
                     'progress'      => 0,
                     'difficulty'    => 'hard',
-                    'details'       => ''
+                    'details'       => 'There\'s a lot we can do to improve the experience for users of non-English locales, many of which are tracked by <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=635826">this bug</a>.'
                 )
             ),
             'q4' => array(
