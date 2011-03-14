@@ -199,6 +199,12 @@ DETAILS
             ),
             'q2' => array(
                 array(
+                    'name'          => 'Add-ons aren\'t installed without user permission',
+                    'progress'      => 0,
+                    'difficulty'    => 'medium',
+                    'details'       => 'Almost all of the top 25 add-ons used in Firefox are installed by third parties, not the user. Most of these third parties do not ask permission and these add-ons often have horrible performance. We should disable third-party installed add-ons by default and let the user choose to opt-in to them if they wish.'
+                ),
+                array(
                     'name'          => 'Expose performance information in Firefox',
                     'progress'      => 0,
                     'difficulty'    => 'medium',
@@ -384,7 +390,7 @@ $vampires = array(
             'quarter'       => 'Q3',
             'progress'      => 0,
             'difficulty'    => 'hard',
-            'details'       => '<a href="http://people.mozilla.com/~chowse/drop/amo/personas/v1/">Designs</a>'
+            'details'       => '<a href="http://people.mozilla.com/~chowse/drop/amo/personas/v1/">Designs</a> | <a href="http://micropipes.com/greaterpercona/">Plan</a>'
         ),
         array(
             'name'          => 'Finish migrating AMO pages to Django and decommission PHP',

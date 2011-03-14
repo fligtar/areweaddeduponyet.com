@@ -101,7 +101,7 @@ $selected_quarter = 'q1';
     </section><!-- /#content -->
     
     <footer>
-        <a href="#" onclick="$('#vampires').toggle(); return false;">Time Vampires</a><span>&middot;</span><a href="https://forums.mozilla.org/addons">Discuss</a><span>&middot;</span>Owner: <a href="http://www.twitter.com/fligtar">@fligtar</a>
+        <a href="#vampires" onclick="$('#vampires').toggle(); return false;">Time Vampires</a><span>&middot;</span><a href="https://forums.mozilla.org/addons">Discuss</a><span>&middot;</span>Owner: <a href="http://www.twitter.com/fligtar">@fligtar</a>
     </footer>
     
     <script type="text/javascript" src="http://g.fligtar.com/jquery.js"></script>
