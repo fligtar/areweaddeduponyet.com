@@ -23,10 +23,10 @@ DETAILS
         'initiatives' => array(
             'q1' => array(
                 array(
-                    'name'          => 'Rewrite Developer Tools and implement new review process',
+                    'name'          => 'Rewrite AMO Developer Tools and implement new review process',
                     'progress'      => 100,
                     'difficulty'    => 'medium',
-                    'details'       => 'Simplify and improve the Developer Tools according to the <a href="https://docs.google.com/Doc?docid=0Acwo2Bn17-PrZGZudHRobnJfNzhmNTh6dGtmeg&hl=en">spec</a> and move to the new Django platform. Include support for the <a href="https://docs.google.com/Doc?docid=0Acwo2Bn17-PrZGZudHRobnJfNzdka3Q2bTdkYw&hl=en">new review process</a> where developers are required to select a review process. <a href="http://people.mozilla.com/~chowse/drop/amo/devtools/v3/">Designs</a>',
+                    'details'       => 'Simplify and improve the Developer Tools according to the <a href="https://docs.google.com/Doc?docid=0Acwo2Bn17-PrZGZudHRobnJfNzhmNTh6dGtmeg&amp;hl=en">spec</a> and move to the new Django platform. Include support for the <a href="https://docs.google.com/Doc?docid=0Acwo2Bn17-PrZGZudHRobnJfNzdka3Q2bTdkYw&amp;hl=en">new review process</a> where developers are required to select a review process. <a href="http://people.mozilla.com/~chowse/drop/amo/devtools/v3/">Designs</a>',
                 ),
                 array(
                     'name'          => 'Propose improvements to the add-on compatibility process',
@@ -35,13 +35,13 @@ DETAILS
                     'details'       => 'The current compatibility process takes several months prior to a major release and requires manual effort by add-on developers. In order to move to quarterly Firefox releases, a better method of maintaining compatibility is needed.'
                 ),
                 array(
-                    'name'          => 'Rewrite Editor Tools to fully support new review process',
+                    'name'          => 'Rewrite AMO Editor Tools to fully support new review process',
                     'progress'      => 75,
                     'difficulty'    => 'medium',
-                    'details'       => 'Move Editor Tools to the new Django codebase for better interaction with the rest of the site and more fully support the new review process.'
+                    'details'       => 'Move Editor Tools to the new Django codebase for better interaction with the rest of the site and to more fully support the new review process.'
                 ),
                 array(
-                    'name'          => 'Switch Contributions to embedded payments flow',
+                    'name'          => 'Switch AMO Contributions to embedded payments flow',
                     'progress'      => 75,
                     'difficulty'    => 'medium',
                     'details'       => 'PayPal\'s embedded payments allows users to make contributions to developers without leaving the site. This will lay the groundwork for using the same system for marketplace.'
@@ -65,7 +65,7 @@ DETAILS
                     'details'       => 'Our blog is a frequent stream of important information on add-ons, AMO, Jetpack, Personas, etc. and needs an improved layout and design.'
                 ),
                 array(
-                    'name'          => 'Finalize plans for remaining FlightDeck/AMO integration',
+                    'name'          => 'Finalize plans for remaining Builder/AMO integration',
                     'progress'      => 50,
                     'difficulty'    => 'medium',
                     'details'       => 'Determine integration and interaction points between AMO and builder.AMO for the rest of the year.'
@@ -76,7 +76,19 @@ DETAILS
                     'name'          => 'Launch marketplace to support freemium add-ons',
                     'progress'      => 0,
                     'difficulty'    => 'hard',
-                    'details'       => ''
+                    'details'       => 'It\'s extremely difficult for add-ons to find an effective business model that also has a good user experience. Providing a marketplace where developers can offer premium versions of their add-ons for a price will bring new developers to the platform, increase the quality of add-ons, and improve the experience.'
+                ),
+                array(
+                    'name'          => 'Support repacking SDK-based add-ons for new versions',
+                    'progress'      => 0,
+                    'difficulty'    => 'hard',
+                    'details'       => 'When a Firefox update or SDK bug requires SDK-based add-ons to upgrade, we should automatically handle these repacks. This will involve the Builder repacking add-ons and submitting updates to AMO.'
+                ),
+                array(
+                    'name'          => 'Update Developer Hub for marketplace &amp; Jetpack and move to Django',
+                    'progress'      => 0,
+                    'difficulty'    => 'medium',
+                    'details'       => 'The Developer Hub should be updated for marketplace and Jetpack documentation and moved to the new Django codebase.'
                 )
             ),
             'q3' => array(
@@ -84,7 +96,13 @@ DETAILS
                     'name'          => 'In-app purchases support in marketplace',
                     'progress'      => 0,
                     'difficulty'    => 'hard',
-                    'details'       => ''
+                    'details'       => 'Support other kinds of business models for add-ons by providing APIs for in-app purchases.'
+                ),
+                array(
+                    'name'          => 'Integrate SDK localization web service with AMO and add-on updates',
+                    'progress'      => 0,
+                    'difficulty'    => 'hard',
+                    'details'       => 'As localization updates are made to common pool strings, these updates must be delivered to users of SDK-based add-ons and included with new add-on downloads.'
                 )
             ),
             'q4' => array(
@@ -137,7 +155,7 @@ DETAILS
 <p>Add-ons are one of biggest reasons people use Firefox, but their performance impact is also one of the reasons people leave, whether they realize it or not. The worst offenders are add-ons not hosted on AMO and installed via third parties, but even hosted add-ons share some of the blame. It's time to get serious about add-on performance impacts.</p>
 
 <h4>Where are we right now?</h4>
-<p>The Automation team can manually run startup (Ts) tests for the most popular add-ons, and AMO is ready to show performance warnings on those add-ons alerting users to the slowness.</p>
+<p>The Automation Tools team can manually run start-up (Ts) tests for the most popular add-ons, and AMO is ready to show performance warnings on those add-ons alerting users to the slowness.</p>
 
 <h4>Where do we want to be?</h4>
 <ul>
@@ -225,7 +243,7 @@ DETAILS
 <h4>Where do we want to be?</h4>
 <ul>
     <li>60% of Firefox users have at least one extension (not Persona, theme, etc.) installed</li>
-    <li>We don't count third-party-installed add-ons such as Java Console</li>
+    <li>We don't count add-ons that are installed without user consent, like Skype Toolbar or Java Console</li>
 </ul>
 DETAILS
 ,
@@ -244,7 +262,7 @@ DETAILS
                     'details'       => 'Build mobile-friendly versions of the homepage, add-on details page, category browse, and search results. <a href="https://wiki.mozilla.org/Mobile/webdevplan/mockups#AMO_Hi-Fi_Mockups">Designs</a>'
                 ),
                 array(
-                    'name'          => 'Redesign homepage and add-on details page',
+                    'name'          => 'Redesign AMO homepage and add-on details page',
                     'progress'      => 25,
                     'difficulty'    => 'medium',
                     'details'       => 'Simplify add-on details page so that important information is front and center and advanced details are available but not highlighted. Revamp homepage to feature more add-ons and better promotions. <a href="http://chowse.github.com/amo-redux/homepage.html">New Homepage design</a> | <a href="http://chowse.github.com/amo-redux/detail.html">New details page design</a>'
@@ -269,7 +287,18 @@ DETAILS
                 )
             ),
             'q2' => array(
-                
+                array(
+                    'name'          => 'Mobile Discovery Pane',
+                    'progress'      => 0,
+                    'difficulty'    => 'easy',
+                    'details'       => 'Build a mobile version of the Discovery Pane for integration in the mobile Add-ons Manager'
+                ),
+                array(
+                    'name'          => 'Add-on Sync in Firefox',
+                    'progress'      => 0,
+                    'difficulty'    => 'medium',
+                    'details'       => 'Sync installed add-ons across devices.'
+                )
             ),
             'q3' => array(
                 array(
@@ -284,7 +313,13 @@ DETAILS
                     'name'          => 'Localization campaign to localize more add-ons and metadata',
                     'progress'      => 0,
                     'difficulty'    => 'hard',
-                    'details'       => ''
+                    'details'       => 'Many add-ons aren\'t localized and even fewer have localized metadata on AMO. We should come up with ways to improve this for both developers and localizers.'
+                ),
+                array(
+                    'name'          => 'Investigate feasibility &amp; benefits of cloud-based Add-ons Manager',
+                    'progress'      => 0,
+                    'difficulty'    => 'hard',
+                    'details'       => 'The mobile team wants the Add-ons Manager to be cloud-based with AMO as the authoritative source for what add-ons are installed. This will be a huge project and we should begin investigating what it means.'
                 )
             )
         ),
@@ -302,38 +337,24 @@ DETAILS
                 'current' => ($remote_data['ecosystem_addonusage']['latest_mobile']['penetration_adu'] * 100).'%'
             )
         )
-    )/*,
-    'vampires' => array(
-        'name' => 'Time Vampires',
-        'quote' => '',
-        'initiatives' => array(
-            'q1' => array(
+    )
+);
 
-            ),
-            'q2' => array(
-                
-            ),
-            'q3' => array(
-                array(
-                    'name'          => 'Move Persona submission and management to AMO; decommission GetPersonas.com',
-                    'progress'      => 0,
-                    'difficulty'    => 'hard',
-                    'details'       => ''
-                )
-            ),
-            'q4' => array(
-                array(
-                    'name'          => 'Finish migrating pages to Django and decommission PHP',
-                    'progress'      => 0,
-                    'difficulty'    => 'hard',
-                    'details'       => ''
-                )
-            ),
+$vampires = array(
+        array(
+            'name'          => 'Move Persona submission and management to AMO; decommission GetPersonas.com',
+            'quarter'       => 'Q3',
+            'progress'      => 0,
+            'difficulty'    => 'hard',
+            'details'       => '<a href="http://people.mozilla.com/~chowse/drop/amo/personas/v1/">Designs</a>'
         ),
-        'kpi' => array(
-            
+        array(
+            'name'          => 'Finish migrating AMO pages to Django and decommission PHP',
+            'quarter'       => 'Q4',
+            'progress'      => 0,
+            'difficulty'    => 'hard',
+            'details'       => '<a href="https://spreadsheets.google.com/ccc?key=0AgX-nlaDaTaBdGhVd3ZlU1ZySWRiNmZ4YmgxTkV6ZlE&amp;hl=en">Migration status</a>'
         )
-    )*/
 );
 
 ?>

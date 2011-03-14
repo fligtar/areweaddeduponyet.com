@@ -24,7 +24,7 @@ $selected_quarter = 'q1';
     <section id="content">
         <?php foreach ($goals as $goal_key => $goal): ?>
         <section id="<?=$goal_key?>" class="selected-initiatives">
-            <h2><blockquote>&#147;<?=$goal['quote']?>&#148;</blockquote><?=$goal['name']?></h2>
+            <h2><span>&#147;<?=$goal['quote']?>&#148;</span><?=$goal['name']?></h2>
             <nav>
                 <a href="#" class="goal" onclick="return selectView(this);">Goal</a>
                 <a href="#" class="initiatives" onclick="return selectView(this);">Initiatives</a>
@@ -78,11 +78,23 @@ $selected_quarter = 'q1';
             </section><!-- /.kpi -->
         </section><!-- /theme -->
         <?php endforeach; ?>
+        
+        <section id="vampires" class="initiatives">
+            <h2>Time Vampires</h2>
+
+            <p>The projects below don't further our goals above, but will still need to be done as part of infrastructure/platform maintenance.</p>
+            <ol>
+                <?php foreach ($vampires as $initiative): ?>
+                    <li>
+                        <strong><?=$initiative['quarter']?></strong><?=$initiative['name']?>
+                        <?=(!empty($initiative['details']) ? "<div>{$initiative['details']}</div>" : '')?>
+                    </li>
+                <?php endforeach; ?>
+            </ol>
+        </section><!-- /#vampires -->
+            
     </section><!-- /#content -->
     
-    <!--<footer>
-        <p>But to answer your original question, yes, we are added upon.</p>
-    </footer>-->
     <script type="text/javascript" src="http://g.fligtar.com/jquery.js"></script>
     <script type="text/javascript" src="dostuff.js"></script>
 

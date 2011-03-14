@@ -154,7 +154,7 @@ header img {
     color: #CF4924;
     text-shadow: 2px 2px 2px #9A201F;
 }
-#content h2 blockquote {
+#content h2 span {
     font-family: georgia, serif;
     font-style: italic;
     color: #C1C7C9;
@@ -390,5 +390,23 @@ header img {
 
 /* Time Vampires */
 #content #vampires {
-    display: none;
+    padding: 20px;
+    background-color: #C1C7C9;
+}
+#content #vampires h2 {
+    font-size: 20px;
+    word-spacing: 4px;
+    color: #333;
+    text-shadow: none;
+}
+#content #vampires section {
+    display: block;
+}
+#content #vampires p {
+    margin: 10px 0;
+    color: #666;
+}
+#content #vampires li strong {
+    font-weight: bold;
+    margin-right: 10px;
 }
