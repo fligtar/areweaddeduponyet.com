@@ -114,7 +114,8 @@ DETAILS
                 'name' => 'New extensions submitted per month',
                 'start' => 302,
                 'goal' => 600,
-                'current' => $remote_data['addons_creation']['30days']['extensions_created']
+                'current' => $remote_data['extensions_created']['30days'],
+                'chart' => $remote_data['extensions_created']['chart']
             ),
             array(
                 'name' => 'New extension developers per month',
@@ -126,13 +127,8 @@ DETAILS
                 'name' => 'Percentage of new extensions using the SDK',
                 'start' => '5%',
                 'goal' => '50%',
-                'current' => (!empty($remote_data['addons_creation']['30days']['extensions_created']) ? round(($remote_data['addons_creation']['30days']['sdk_created'] / $remote_data['addons_creation']['30days']['extensions_created']) * 100, 2) : 0).'%'
-            ),
-            array(
-                'name' => 'New add-ons created using the Add-on Builder per month',
-                'start' => '',
-                'goal' => '',
-                'current' => ''
+                'current' => (!empty($remote_data['extensions_created']['30days']) ? round(($remote_data['sdk_created']['30days'] / $remote_data['extensions_created']['30days']) * 100, 2) : 0).'%',
+                'chart' => $remote_data['sdk_created']['chart']
             ),
             array(
                 'name' => 'Average review time for new add-ons',
@@ -141,11 +137,17 @@ DETAILS
                 'current' => ''
             ),
             array(
+                'name' => 'Average review time for updates',
+                'start' => '',
+                'goal' => '',
+                'current' => ''
+            ),
+            array(
                 'name' => 'Percentage of user-installed add-ons active on AMO',
                 'start' => '68%',
                 'goal' => '90%',
-                'current' => (!empty($remote_data['ecosystem_addonusage']['latest']['addons_installed']) ? round(($remote_data['ecosystem_addonusage']['latest']['amo_active_adu'] / $remote_data['ecosystem_addonusage']['latest']['addons_installed']) * 100, 2) : 0).'%'
-            ),
+                'current' => $remote_data['amo_percentage']['latest'].'%'
+            )
         )
     ),
     'performance' => array(
@@ -228,7 +230,18 @@ DETAILS
             ),
         ),
         'kpi' => array(
-            
+            array(
+                'name' => 'Add-ons over performance warning threshold',
+                'start' => '',
+                'goal' => '',
+                'current' => ''
+            ),
+            array(
+                'name' => 'Start-up time impact per installed add-on',
+                'start' => '',
+                'goal' => '',
+                'current' => ''
+            )
         )
     ),
     'penetration' => array(
@@ -328,14 +341,39 @@ DETAILS
                 'name' => 'Firefox Desktop users with an extension installed',
                 'start' => '40%',
                 'goal' => '60%',
-                'current' => ($remote_data['ecosystem_addonusage']['latest']['penetration'] * 100).'%'
+                'current' => ($remote_data['penetration']['latest'] * 100).'%'
             ),
             array(
                 'name' => 'Firefox Mobile users with an extension installed',
                 'start' => '0%',
                 'goal' => '40%',
-                'current' => ($remote_data['ecosystem_addonusage']['latest_mobile']['penetration_adu'] * 100).'%'
-            )
+                'current' => ($remote_data['penetration_mobile']['latest'] * 100).'%'
+            ),
+            array(
+                'name' => 'Add-ons on AMO with metadata in multiple locales',
+                'start' => '',
+                'goal' => '',
+                'current' => ''
+            ),
+            array(
+                'name' => 'Proportion of global add-on usage from non-English locales',
+                'start' => '',
+                'goal' => '',
+                'current' => ''
+            ),
+            array(
+                'name' => 'New visitors to AMO each month',
+                'start' => '',
+                'goal' => '',
+                'current' => ''
+            ),
+            array(
+                'name' => 'Percentage of new extensions that are restartless',
+                'start' => '5%',
+                'goal' => '60%',
+                'current' => (!empty($remote_data['extensions_created']['30days']) ? round(($remote_data['restartless_created']['30days'] / $remote_data['extensions_created']['30days']) * 100, 2) : 0).'%',
+                'chart' => $remote_data['restartless_created']['chart']
+            ),
         )
     )
 );

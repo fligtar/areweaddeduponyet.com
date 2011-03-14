@@ -384,14 +384,40 @@ header img {
 #content .kpi td:first-child {
     text-align: left;
 }
+#content .kpi tr.has-chart td:first-child {
+    background-image: url(images/stats.png);
+    background-repeat: no-repeat;
+    background-position: right 3px;
+}
 #content .kpi tr:nth-child(even) td {
     background-color: rgba(255, 255, 255, 0.2);
+}
+#content .kpi tr:hover td {
+    background-color: #E0E3E4;
+}
+#content .kpi tr td > div {
+    display: none;
+    background-color: #E0E3E4;
+    position: absolute;
+    z-index: 20;
+    padding: 5px;
+    margin-left: -460px;
+    width: 450px;
+    margin-top: 4px;
+}
+#content .kpi tr:hover td > div {
+    display: block;
+}
+#content .chart {
+    height: 200px;
+    width: 450px;
 }
 
 /* Time Vampires */
 #content #vampires {
     padding: 20px;
     background-color: #C1C7C9;
+    display: none;
 }
 #content #vampires h2 {
     font-size: 20px;
@@ -409,4 +435,20 @@ header img {
 #content #vampires li strong {
     font-weight: bold;
     margin-right: 10px;
+}
+
+footer {
+    text-align: center;
+    color: #666;
+    font-family: 'Bebas';
+    word-spacing: 2px;
+    font-size: 11px;
+    padding-bottom: 10px;
+}
+footer a:hover {
+    color: #999;
+}
+footer span {
+    font-size: 14px;
+    margin: 0 5px;
 }

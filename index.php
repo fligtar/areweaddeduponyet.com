@@ -65,12 +65,17 @@ $selected_quarter = 'q1';
                         <tr><th></th><th>Start</th><th>Current</th><th>Goal</th></tr>
                     </thead>
                     <tbody>
-                    <?php foreach ($goal['kpi'] as $kpi): ?>
-                        <tr>
+                    <?php foreach ($goal['kpi'] as $k => $kpi): ?>
+                        <tr<?=(!empty($kpi['chart']) ? ' class="has-chart"' : '')?>>
                             <td><?=$kpi['name']?></td>
                             <td><?=$kpi['start']?></td>
                             <td><?=$kpi['current']?></td>
                             <td><?=$kpi['goal']?></td>
+                            <td><?php
+                            if (!empty($kpi['chart'])) {
+                                echo '<div><div id="chart-'.$goal_key.'-'.$k.'" class="chart" data-series="'.php2series($kpi['chart']).'"></div></div>';
+                            }
+                            ?></td>
                         </tr>
                     <?php endforeach; ?>
                     </tbody>
@@ -92,11 +97,16 @@ $selected_quarter = 'q1';
                 <?php endforeach; ?>
             </ol>
         </section><!-- /#vampires -->
-            
+        
     </section><!-- /#content -->
     
+    <footer>
+        <a href="#" onclick="$('#vampires').toggle(); return false;">Time Vampires</a><span>&middot;</span><a href="https://forums.mozilla.org/addons">Discuss</a><span>&middot;</span>Owner: <a href="http://www.twitter.com/fligtar">@fligtar</a>
+    </footer>
+    
     <script type="text/javascript" src="http://g.fligtar.com/jquery.js"></script>
-    <script type="text/javascript" src="dostuff.js"></script>
+    <script type="text/javascript" src="js/highcharts.js"></script>
+    <script type="text/javascript" src="js/hey.js"></script>
 
     <!-- Google Analytics -->
     <script type="text/javascript">
