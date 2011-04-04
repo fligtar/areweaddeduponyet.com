@@ -2,7 +2,7 @@
 require_once 'data/panorama.php';
 require_once 'data/goals.php';
 
-$selected_quarter = 'q1';
+$selected_quarter = 'q2';
 ?>
 
 <!DOCTYPE html>

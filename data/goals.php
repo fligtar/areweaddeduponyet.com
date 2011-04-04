@@ -30,53 +30,47 @@ DETAILS
                 ),
                 array(
                     'name'          => 'Propose improvements to the add-on compatibility process',
-                    'progress'      => 0,
+                    'progress'      => 100,
                     'difficulty'    => 'hard',
                     'details'       => 'The current compatibility process takes several months prior to a major release and requires manual effort by add-on developers. In order to move to quarterly Firefox releases, a better method of maintaining compatibility is needed.'
                 ),
                 array(
                     'name'          => 'Rewrite AMO Editor Tools to fully support new review process',
-                    'progress'      => 75,
+                    'progress'      => 100,
                     'difficulty'    => 'medium',
                     'details'       => 'Move Editor Tools to the new Django codebase for better interaction with the rest of the site and to more fully support the new review process.'
                 ),
                 array(
                     'name'          => 'Switch AMO Contributions to embedded payments flow',
-                    'progress'      => 75,
+                    'progress'      => 100,
                     'difficulty'    => 'medium',
                     'details'       => 'PayPal\'s embedded payments allows users to make contributions to developers without leaving the site. This will lay the groundwork for using the same system for marketplace.'
                 ),
                 array(
-                    'name'          => 'Finalize marketplace specification, policies, and designs',
-                    'progress'      => 10,
-                    'difficulty'    => 'medium',
-                    'details'       => 'Prepare for marketplace implementation in Q2 by finalizing the spec, starting on policies for developers and site management, and working on the designs.'
-                ),
-                array(
                     'name'          => 'Complete transition into the new review process with no unreviewed add-ons publicly available',
-                    'progress'      => 50,
+                    'progress'      => 100,
                     'difficulty'    => 'medium',
                     'details'       => 'With over 7,000 add-ons in the sandbox, requiring Editor review to be listed on AMO will cause a surge in the review queues as we switch to the new process. We should be ready to handle this surge and return the queues to normal by the end of the quarter.'
                 ),
                 array(
                     'name'          => 'Launch redesigned Add-ons Blog for better communication with add-on users and developers',
-                    'progress'      => 90,
+                    'progress'      => 100,
                     'difficulty'    => 'easy',
                     'details'       => 'Our blog is a frequent stream of important information on add-ons, AMO, Jetpack, Personas, etc. and needs an improved layout and design.'
                 ),
                 array(
                     'name'          => 'Finalize plans for remaining Builder/AMO integration',
-                    'progress'      => 50,
+                    'progress'      => 100,
                     'difficulty'    => 'medium',
                     'details'       => 'Determine integration and interaction points between AMO and builder.AMO for the rest of the year.'
                 ),
             ),
             'q2' => array(
                 array(
-                    'name'          => 'Launch marketplace to support freemium add-ons',
+                    'name'          => 'Finalize marketplace specification, policies, and designs',
                     'progress'      => 0,
-                    'difficulty'    => 'hard',
-                    'details'       => 'It\'s extremely difficult for add-ons to find an effective business model that also has a good user experience. Providing a marketplace where developers can offer premium versions of their add-ons for a price will bring new developers to the platform, increase the quality of add-ons, and improve the experience.'
+                    'difficulty'    => 'medium',
+                    'details'       => 'Prepare for marketplace implementation in Q2 by finalizing the spec, starting on policies for developers and site management, and working on the designs. (carry-over from Q1)'
                 ),
                 array(
                     'name'          => 'Support repacking SDK-based add-ons for new versions',
@@ -93,10 +87,10 @@ DETAILS
             ),
             'q3' => array(
                 array(
-                    'name'          => 'In-app purchases support in marketplace',
+                    'name'          => 'Launch marketplace to support freemium add-ons',
                     'progress'      => 0,
                     'difficulty'    => 'hard',
-                    'details'       => 'Support other kinds of business models for add-ons by providing APIs for in-app purchases.'
+                    'details'       => 'It\'s extremely difficult for add-ons to find an effective business model that also has a good user experience. Providing a marketplace where developers can offer premium versions of their add-ons for a price will bring new developers to the platform, increase the quality of add-ons, and improve the experience.'
                 ),
                 array(
                     'name'          => 'Integrate SDK localization web service with AMO and add-on updates',
@@ -106,7 +100,12 @@ DETAILS
                 )
             ),
             'q4' => array(
-                
+                array(
+                    'name'          => 'In-app purchases support in marketplace',
+                    'progress'      => 0,
+                    'difficulty'    => 'hard',
+                    'details'       => 'Support other kinds of business models for add-ons by providing APIs for in-app purchases.'
+                )
             )
         ),
         'kpi' => array(
@@ -174,30 +173,30 @@ DETAILS
             'q1' => array(
                 array(
                     'name'          => 'Display performance warnings on AMO for add-ons causing significant Firefox start-up delays',
-                    'progress'      => 75,
+                    'progress'      => 100,
                     'difficulty'    => 'high',
                     'details'       => 'Users should know when they\'re about to install an add-on that will slow their browser down. When our automated testing identifies slow add-ons, we should show warnings on AMO.'
                 ),
                 array(
                     'name'          => 'Establish acceptable performance ranges and blocklist policy',
-                    'progress'      => 25,
+                    'progress'      => 100,
                     'difficulty'    => 'low',
                     'details'       => 'For several key metrics (start-up time, page load time, etc.) identify ranges that are deemed great, okay, poor, and unacceptable and the action to be taken for add-ons that fall into those ranges. Revamp the add-ons blocklist policy and include performance ranges.'
                 ),
                 array(
                     'name'          => 'Gather data on add-on performance in the wild and reach out/blocklist',
-                    'progress'      => 75,
+                    'progress'      => 100,
                     'difficulty'    => 'medium',
                     'details'       => 'Using data obtained from real-world usage, identify slow add-ons and work with the developers to correct the problems.'
-                ),
-                array(
-                    'name'          => 'Automate performance tests for newly submitted add-ons',
-                    'progress'      => 10,
-                    'difficulty'    => 'hard',
-                    'details'       => 'All newly submitted add-ons and versions should undergo automated performance testing before being reviewed by an Editor.'
                 )
             ),
             'q2' => array(
+                array(
+                    'name'          => 'Automate performance tests for newly submitted add-ons',
+                    'progress'      => 25,
+                    'difficulty'    => 'hard',
+                    'details'       => 'All newly submitted add-ons and versions should undergo automated performance testing before being reviewed by an Editor. (carry-over from Q1)'
+                ),
                 array(
                     'name'          => 'Add-ons aren\'t installed without user permission',
                     'progress'      => 0,
@@ -215,15 +214,15 @@ DETAILS
                     'progress'      => 0,
                     'difficulty'    => 'high',
                     'details'       => 'Allow developers to upload an add-on and get emailed a performance report before submitting to AMO.'
-                ),
+                )
+            ),
+            'q3' => array(
                 array(
                     'name'          => 'Launch performance campaign directed at developers',
                     'progress'      => 0,
                     'difficulty'    => 'medium',
                     'details'       => 'Bring performance to the forefront of developers\' minds when developing their add-ons.'
-                )
-            ),
-            'q3' => array(
+                ),
                 array(
                     'name'          => 'Expand performance testing to cover other measurements',
                     'progress'      => 0,
@@ -279,33 +278,15 @@ DETAILS
                     'progress'      => 100,
                     'difficulty'    => 'medium',
                     'details'       => 'Build mobile-friendly versions of the homepage, add-on details page, category browse, and search results. <a href="https://wiki.mozilla.org/Mobile/webdevplan/mockups#AMO_Hi-Fi_Mockups">Designs</a>'
-                ),
-                array(
-                    'name'          => 'Redesign AMO homepage and add-on details page',
-                    'progress'      => 25,
-                    'difficulty'    => 'medium',
-                    'details'       => 'Simplify add-on details page so that important information is front and center and advanced details are available but not highlighted. Revamp homepage to feature more add-ons and better promotions. <a href="http://chowse.github.com/amo-redux/homepage.html">New Homepage design</a> | <a href="http://chowse.github.com/amo-redux/detail.html">New details page design</a>'
-                ),
-                array(
-                    'name'          => 'Create "getting started" page with video',
-                    'progress'      => 0,
-                    'difficulty'    => 'medium',
-                    'details'       => 'AMO needs a page to explain what add-ons are, why users would want them, and offer one or two awesome add-ons to try out. There should be an easy-to-understand video with animation.'
-                ),
-                array(
-                    'name'          => 'Revamp process of featuring add-ons',
-                    'progress'      => 25,
-                    'difficulty'    => 'easy',
-                    'details'       => 'The process of featuring add-ons is not transparent and has been neglected for many months. Propose and implement a better system.'
-                ),
-                array(
-                    'name'          => 'Begin locale-specific featured lists in 3 tier 1 locales',
-                    'progress'      => 0,
-                    'difficulty'    => 'easy',
-                    'details'       => 'We currently feature the same add-ons in all locales, most of which are not localized in those locales. We should begin maintaining locale-specific featured lists.'
                 )
             ),
             'q2' => array(
+                array(
+                    'name'          => 'Redesign AMO homepage and add-on details page',
+                    'progress'      => 10,
+                    'difficulty'    => 'medium',
+                    'details'       => 'Simplify add-on details page so that important information is front and center and advanced details are available but not highlighted. Revamp homepage to feature more add-ons and better promotions. <a href="http://chowse.github.com/amo-redux/homepage.html">New Homepage design</a> | <a href="http://chowse.github.com/amo-redux/detail.html">New details page design</a> (carry-over from Q1)'
+                ),
                 array(
                     'name'          => 'Mobile Discovery Pane',
                     'progress'      => 0,
@@ -317,6 +298,24 @@ DETAILS
                     'progress'      => 0,
                     'difficulty'    => 'medium',
                     'details'       => 'Sync installed add-ons across devices.'
+                ),
+                array(
+                    'name'          => 'Create "getting started" page with video',
+                    'progress'      => 0,
+                    'difficulty'    => 'medium',
+                    'details'       => 'AMO needs a page to explain what add-ons are, why users would want them, and offer one or two awesome add-ons to try out. There should be an easy-to-understand video with animation. (carry-over from Q1)'
+                ),
+                array(
+                    'name'          => 'Revamp process of featuring add-ons',
+                    'progress'      => 75,
+                    'difficulty'    => 'easy',
+                    'details'       => 'The process of featuring add-ons is not transparent and has been neglected for many months. Propose and implement a better system. (carry-over from Q1)'
+                ),
+                array(
+                    'name'          => 'Begin locale-specific featured lists in 3 tier 1 locales',
+                    'progress'      => 50,
+                    'difficulty'    => 'easy',
+                    'details'       => 'We currently feature the same add-ons in all locales, most of which are not localized in those locales. We should begin maintaining locale-specific featured lists. (carry-over from Q1)'
                 )
             ),
             'q3' => array(
