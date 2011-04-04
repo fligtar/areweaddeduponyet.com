@@ -33,7 +33,8 @@ $(document).ready(function() {
                 categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
             },
             yAxis: {
-                title: { text: '' }
+                title: { text: '' },
+                min: 0
             },
             credits: {
                 enabled: false
