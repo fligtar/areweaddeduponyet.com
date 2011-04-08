@@ -243,9 +243,9 @@ DETAILS
             ),
             array(
                 'name' => 'Start-up time impact per installed add-on',
-                'start' => '',
-                'goal' => '',
-                'current' => ''
+                'start' => '10%',
+                'goal' => '5%',
+                'current' => $remote_data['performance_avg_impact']['latest'].'%'
             )
         )
     ),
