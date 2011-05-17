@@ -68,19 +68,19 @@ DETAILS
             'q2' => array(
                 array(
                     'name'          => 'Finalize marketplace specification, policies, and designs',
-                    'progress'      => 0,
+                    'progress'      => 10,
                     'difficulty'    => 'medium',
                     'details'       => 'Prepare for marketplace implementation in Q2 by finalizing the spec, starting on policies for developers and site management, and working on the designs. (carry-over from Q1)'
                 ),
                 array(
                     'name'          => 'Support repacking SDK-based add-ons for new versions',
-                    'progress'      => 0,
+                    'progress'      => 25,
                     'difficulty'    => 'hard',
                     'details'       => 'When a Firefox update or SDK bug requires SDK-based add-ons to upgrade, we should automatically handle these repacks. This will involve the Builder repacking add-ons and submitting updates to AMO.'
                 ),
                 array(
                     'name'          => 'Update Developer Hub for marketplace &amp; Jetpack and move to Django',
-                    'progress'      => 0,
+                    'progress'      => 10,
                     'difficulty'    => 'medium',
                     'details'       => 'The Developer Hub should be updated for marketplace and Jetpack documentation and moved to the new Django codebase.'
                 )
@@ -199,7 +199,7 @@ DETAILS
                 ),
                 array(
                     'name'          => 'Add-ons aren\'t installed without user permission',
-                    'progress'      => 0,
+                    'progress'      => 25,
                     'difficulty'    => 'medium',
                     'details'       => 'Almost all of the top 25 add-ons used in Firefox are installed by third parties, not the user. Most of these third parties do not ask permission and these add-ons often have horrible performance. We should disable third-party installed add-ons by default and let the user choose to opt-in to them if they wish.'
                 ),
@@ -211,7 +211,7 @@ DETAILS
                 ),
                 array(
                     'name'          => 'Provide on-demand performance analysis tool',
-                    'progress'      => 0,
+                    'progress'      => 25,
                     'difficulty'    => 'high',
                     'details'       => 'Allow developers to upload an add-on and get emailed a performance report before submitting to AMO.'
                 )
@@ -283,7 +283,7 @@ DETAILS
             'q2' => array(
                 array(
                     'name'          => 'Redesign AMO homepage and add-on details page',
-                    'progress'      => 10,
+                    'progress'      => 25,
                     'difficulty'    => 'medium',
                     'details'       => 'Simplify add-on details page so that important information is front and center and advanced details are available but not highlighted. Revamp homepage to feature more add-ons and better promotions. <a href="http://chowse.github.com/amo-redux/homepage.html">New Homepage design</a> | <a href="http://chowse.github.com/amo-redux/detail.html">New details page design</a> (carry-over from Q1)'
                 ),
@@ -313,7 +313,7 @@ DETAILS
                 ),
                 array(
                     'name'          => 'Begin locale-specific featured lists in 3 tier 1 locales',
-                    'progress'      => 50,
+                    'progress'      => 100,
                     'difficulty'    => 'easy',
                     'details'       => 'We currently feature the same add-ons in all locales, most of which are not localized in those locales. We should begin maintaining locale-specific featured lists. (carry-over from Q1)'
                 )
