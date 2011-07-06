@@ -67,45 +67,57 @@ DETAILS
             ),
             'q2' => array(
                 array(
-                    'name'          => 'Finalize marketplace specification, policies, and designs',
-                    'progress'      => 10,
-                    'difficulty'    => 'medium',
-                    'details'       => 'Prepare for marketplace implementation in Q2 by finalizing the spec, starting on policies for developers and site management, and working on the designs. (carry-over from Q1)'
-                ),
-                array(
                     'name'          => 'Support repacking SDK-based add-ons for new versions',
-                    'progress'      => 25,
+                    'progress'      => 100,
                     'difficulty'    => 'hard',
                     'details'       => 'When a Firefox update or SDK bug requires SDK-based add-ons to upgrade, we should automatically handle these repacks. This will involve the Builder repacking add-ons and submitting updates to AMO.'
                 ),
                 array(
                     'name'          => 'Update Developer Hub for marketplace &amp; Jetpack and move to Django',
-                    'progress'      => 10,
+                    'progress'      => 75,
                     'difficulty'    => 'medium',
                     'details'       => 'The Developer Hub should be updated for marketplace and Jetpack documentation and moved to the new Django codebase.'
                 )
             ),
             'q3' => array(
                 array(
-                    'name'          => 'Launch marketplace to support freemium add-ons',
+                    'name'          => 'Finalize marketplace specification, policies, and designs',
+                    'progress'      => 10,
+                    'difficulty'    => 'medium',
+                    'details'       => 'Prepare for marketplace implementation in Q2 by finalizing the spec, starting on policies for developers and site management, and working on the designs. (carry-over from Q1)'
+                ),
+                array(
+                    'name'          => 'Builder session integration with AMO',
+                    'progress'      => 0,
+                    'difficulty'    => 'medium',
+                    'details'       => 'When you\'re logged into AMO, you\'re logged into Builder.'
+                ),
+                array(
+                    'name'          => 'Builder publishing to AMO gallery',
                     'progress'      => 0,
                     'difficulty'    => 'hard',
-                    'details'       => 'It\'s extremely difficult for add-ons to find an effective business model that also has a good user experience. Providing a marketplace where developers can offer premium versions of their add-ons for a price will bring new developers to the platform, increase the quality of add-ons, and improve the experience.'
-                ),
+                    'details'       => 'Publish your Builder add-on to addons.mozilla.org without having to download it.'
+                )
+            ),
+            'q4' => array(
                 array(
                     'name'          => 'Integrate SDK localization web service with AMO and add-on updates',
                     'progress'      => 0,
                     'difficulty'    => 'hard',
                     'details'       => 'As localization updates are made to common pool strings, these updates must be delivered to users of SDK-based add-ons and included with new add-on downloads.'
-                )
-            ),
-            'q4' => array(
+                ),
                 array(
+                    'name'          => 'Launch marketplace to support freemium add-ons',
+                    'progress'      => 0,
+                    'difficulty'    => 'hard',
+                    'details'       => 'It\'s extremely difficult for add-ons to find an effective business model that also has a good user experience. Providing a marketplace where developers can offer premium versions of their add-ons for a price will bring new developers to the platform, increase the quality of add-ons, and improve the experience.'
+                ),
+                /*array(
                     'name'          => 'In-app purchases support in marketplace',
                     'progress'      => 0,
                     'difficulty'    => 'hard',
                     'details'       => 'Support other kinds of business models for add-ons by providing APIs for in-app purchases.'
-                )
+                )*/
             )
         ),
         'kpi' => array(
@@ -191,32 +203,34 @@ DETAILS
                 )
             ),
             'q2' => array(
+            ),
+            'q3' => array(
                 array(
                     'name'          => 'Automate performance tests for newly submitted add-ons',
-                    'progress'      => 25,
+                    'progress'      => 50,
                     'difficulty'    => 'hard',
                     'details'       => 'All newly submitted add-ons and versions should undergo automated performance testing before being reviewed by an Editor. (carry-over from Q1)'
                 ),
                 array(
                     'name'          => 'Add-ons aren\'t installed without user permission',
-                    'progress'      => 25,
+                    'progress'      => 50,
                     'difficulty'    => 'medium',
                     'details'       => 'Almost all of the top 25 add-ons used in Firefox are installed by third parties, not the user. Most of these third parties do not ask permission and these add-ons often have horrible performance. We should disable third-party installed add-ons by default and let the user choose to opt-in to them if they wish.'
                 ),
                 array(
                     'name'          => 'Expose performance information in Firefox',
-                    'progress'      => 0,
+                    'progress'      => 10,
                     'difficulty'    => 'medium',
-                    'details'       => 'Include performance data in AMO\'s API and display in the Firefox Add-ons Manager.'
+                    'details'       => 'Include performance data in AMO\'s API and display in the Firefox Add-ons Manager. (carry-over from Q2)'
                 ),
                 array(
                     'name'          => 'Provide on-demand performance analysis tool',
                     'progress'      => 25,
                     'difficulty'    => 'high',
-                    'details'       => 'Allow developers to upload an add-on and get emailed a performance report before submitting to AMO.'
+                    'details'       => 'Allow developers to upload an add-on and get emailed a performance report before submitting to AMO. (carry-over from Q2)'
                 )
             ),
-            'q3' => array(
+            'q4' => array(
                 array(
                     'name'          => 'Launch performance campaign directed at developers',
                     'progress'      => 0,
@@ -229,9 +243,6 @@ DETAILS
                     'difficulty'    => 'medium',
                     'details'       => 'In addition to start-up time (Ts), we should also measure add-on impact on page load time (Tp) and other measures.'
                 )
-            ),
-            'q4' => array(
-                
             ),
         ),
         'kpi' => array(
@@ -283,27 +294,9 @@ DETAILS
             'q2' => array(
                 array(
                     'name'          => 'Redesign AMO homepage and add-on details page',
-                    'progress'      => 25,
+                    'progress'      => 75,
                     'difficulty'    => 'medium',
                     'details'       => 'Simplify add-on details page so that important information is front and center and advanced details are available but not highlighted. Revamp homepage to feature more add-ons and better promotions. <a href="http://chowse.github.com/amo-redux/homepage.html">New Homepage design</a> | <a href="http://chowse.github.com/amo-redux/detail.html">New details page design</a> (carry-over from Q1)'
-                ),
-                array(
-                    'name'          => 'Mobile Discovery Pane',
-                    'progress'      => 0,
-                    'difficulty'    => 'easy',
-                    'details'       => 'Build a mobile version of the Discovery Pane for integration in the mobile Add-ons Manager'
-                ),
-                array(
-                    'name'          => 'Add-on Sync in Firefox',
-                    'progress'      => 0,
-                    'difficulty'    => 'medium',
-                    'details'       => 'Sync installed add-ons across devices.'
-                ),
-                array(
-                    'name'          => 'Create "getting started" page with video',
-                    'progress'      => 0,
-                    'difficulty'    => 'medium',
-                    'details'       => 'AMO needs a page to explain what add-ons are, why users would want them, and offer one or two awesome add-ons to try out. There should be an easy-to-understand video with animation. (carry-over from Q1)'
                 ),
                 array(
                     'name'          => 'Revamp process of featuring add-ons',
@@ -320,10 +313,22 @@ DETAILS
             ),
             'q3' => array(
                 array(
-                    'name'          => 'Improve experience for non-English locales in AMO',
+                    'name'          => 'Create "getting started" page with video',
                     'progress'      => 0,
-                    'difficulty'    => 'hard',
-                    'details'       => 'There\'s a lot we can do to improve the experience for users of non-English locales, many of which are tracked by <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=635826">this bug</a>.'
+                    'difficulty'    => 'medium',
+                    'details'       => 'AMO needs a page to explain what add-ons are, why users would want them, and offer one or two awesome add-ons to try out. There should be an easy-to-understand video with animation. (carry-over from Q1)'
+                ),
+                array(
+                    'name'          => 'Search suggestions on AMO',
+                    'progress'      => 0,
+                    'difficulty'    => 'easy',
+                    'details'       => 'When typing in the search box, AMO should suggest add-on names that match.'
+                ),
+                array(
+                    'name'          => 'Show only compatible add-ons on AMO',
+                    'progress'      => 0,
+                    'difficulty'    => 'easy',
+                    'details'       => 'When browsing around the site, users should only see add-ons that will work on their browser.'
                 )
             ),
             'q4' => array(
@@ -334,10 +339,22 @@ DETAILS
                     'details'       => 'Many add-ons aren\'t localized and even fewer have localized metadata on AMO. We should come up with ways to improve this for both developers and localizers.'
                 ),
                 array(
-                    'name'          => 'Investigate feasibility &amp; benefits of cloud-based Add-ons Manager',
+                    'name'          => 'Improve experience for non-English locales in AMO',
                     'progress'      => 0,
                     'difficulty'    => 'hard',
-                    'details'       => 'The mobile team wants the Add-ons Manager to be cloud-based with AMO as the authoritative source for what add-ons are installed. This will be a huge project and we should begin investigating what it means.'
+                    'details'       => 'There\'s a lot we can do to improve the experience for users of non-English locales, many of which are tracked by <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=635826">this bug</a>.'
+                ),
+                array(
+                    'name'          => 'Mobile Discovery Pane',
+                    'progress'      => 0,
+                    'difficulty'    => 'easy',
+                    'details'       => 'Build a mobile version of the Discovery Pane for integration in the mobile Add-ons Manager'
+                ),
+                array(
+                    'name'          => 'Add-on Sync in Firefox',
+                    'progress'      => 0,
+                    'difficulty'    => 'medium',
+                    'details'       => 'Sync installed add-ons across devices.'
                 )
             )
         ),
